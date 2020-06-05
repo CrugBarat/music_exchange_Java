@@ -4,12 +4,14 @@ public abstract class Instrument {
 
     private String brand;
     private String model;
+    private String type;
     private double cost;
     private double retail;
 
-    public Instrument(String brand, String model, double cost, double retail) {
+    public Instrument(String brand, String model, String type, double cost, double retail) {
         this.brand = brand;
         this.model = model;
+        this.type = type;
         this.cost = cost;
         this.retail = retail;
     }
@@ -20,6 +22,10 @@ public abstract class Instrument {
 
     public String getModel() {
         return this.model;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public double getCost() {
@@ -38,6 +44,10 @@ public abstract class Instrument {
         this.model = model;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public void setCost(double cost) {
         this.cost = cost;
     }
@@ -45,4 +55,5 @@ public abstract class Instrument {
     public void setRetail(double retail) {
         this.retail = retail;
     }
+
 }
