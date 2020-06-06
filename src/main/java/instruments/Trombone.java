@@ -8,7 +8,8 @@ public class Trombone extends Instrument implements IPlay {
     private int bellDiameter;
     private int boreDiameter;
 
-    public Trombone(String bodyDesign, int bellDiameter, int boreDiameter) {
+    public Trombone(String brand, String model, String type, double cost, double retail, String bodyDesign, int bellDiameter, int boreDiameter) {
+        super(brand, model, type, cost, retail);
         this.bodyDesign = bodyDesign;
         this.bellDiameter = bellDiameter;
         this.boreDiameter = boreDiameter;
