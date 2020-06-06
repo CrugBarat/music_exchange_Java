@@ -1,6 +1,8 @@
 package instruments;
 
-public class Trombone {
+import behaviours.IPlay;
+
+public class Trombone extends Instrument implements IPlay {
 
     private String bodyDesign;
     private int bellDiameter;
@@ -34,5 +36,9 @@ public class Trombone {
 
     public void setBoreDiameter(int boreDiameter) {
         this.boreDiameter = boreDiameter;
+    }
+
+    public String play() {
+        return "Wah, wah, wah";
     }
 }
