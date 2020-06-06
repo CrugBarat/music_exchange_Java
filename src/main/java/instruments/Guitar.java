@@ -56,4 +56,8 @@ public class Guitar extends Instrument {
     public void setNeck(String neck) {
         this.neck = neck;
     }
+
+    public String play() {
+        return "dling dling";
+    }
 }

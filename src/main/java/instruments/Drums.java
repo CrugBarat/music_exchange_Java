@@ -56,4 +56,8 @@ public class Drums extends Instrument {
     public void setFloorTomSpec(String floorTomSpec) {
         this.floorTomSpec = floorTomSpec;
     }
+
+    public String play() {
+        return "rat-a-tat-tat";
+    }
 }

@@ -36,4 +36,8 @@ public class Keys extends Instrument {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+    public String play() {
+        return "ding ding";
+    }
 }
