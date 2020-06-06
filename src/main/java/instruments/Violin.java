@@ -1,11 +1,14 @@
 package instruments;
 
-public class Violin {
+import behaviours.IPlay;
+
+public class Violin extends Instrument implements IPlay {
 
     private String size;
     private String bow;
 
-    public Violin(String size, String bow) {
+    public Violin(String brand, String model, String type, double cost, double retail, String size, String bow) {
+        super(brand, model, type, cost, retail);
         this.size = size;
         this.bow = bow;
     }
@@ -24,5 +27,9 @@ public class Violin {
 
     public void setBow(String bow) {
         this.bow = bow;
+    }
+
+    public String play() {
+        return "Pling pling-a-pling";
     }
 }
