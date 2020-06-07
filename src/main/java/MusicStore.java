@@ -1,5 +1,6 @@
 import behaviours.ISell;
 import java.util.HashMap;
+import java.util.Map;
 
 public class MusicStore {
 
@@ -55,5 +56,16 @@ public class MusicStore {
                 this.stock.replace(stockItem, value);
             }
         }
+    }
+
+    public double calculatePotentialProfit() {
+        double potentialProfit = 0.0;
+        for (Map.Entry<ISell, Integer> entry : this.stock.entrySet()) {
+            ISell key = entry.getKey();
+            int value = entry.getValue();
+            double potentialStockProfit = key.calculateMarkup() * value;
+            potentialProfit += potentialStockProfit;
+        }
+        return potentialProfit;
     }
 }

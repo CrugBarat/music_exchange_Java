@@ -1,5 +1,7 @@
+import accessories.Case;
 import behaviours.ISell;
 import instruments.Guitar;
+import instruments.Instrument;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -8,12 +10,13 @@ import static org.junit.Assert.assertNull;
 public class MusicStoreTest {
 
     MusicStore musicStore;
-    ISell stockItem;
+    ISell stockItem, stockItem2;
 
     @Before
     public void before() {
         musicStore =new MusicStore("HMV");
         stockItem = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
+        stockItem2 = new Case("BAM", "8004XL", 500.0, 567.93, (Instrument) stockItem);
     }
 
     @Test
@@ -79,5 +82,15 @@ public class MusicStoreTest {
     public void canIncreaseStockAmountIfInitiallyNoStock() {
         musicStore.increaseStock(stockItem);
         assertEquals(1, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void canCalculatePotentialProfit() {
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem2);
+        musicStore.increaseStock(stockItem2);
+        assertEquals(657.86, musicStore.calculatePotentialProfit(), 0.01);
     }
 }
