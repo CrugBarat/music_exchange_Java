@@ -23,4 +23,11 @@ public class TambourineTest {
     public void canCalculateMarkup() {
         assertEquals(39, tambourine.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        tambourine.applyDiscount(0.1);
+        assertEquals(102.6, tambourine.getRetail(), 0.01);
+    }
+
 }

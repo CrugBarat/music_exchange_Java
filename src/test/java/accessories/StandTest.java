@@ -22,4 +22,11 @@ public class StandTest {
     public void canCalculateMarkup() {
         assertEquals(39.25, stand.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        stand.applyDiscount(0.1);
+        assertEquals(170.33, stand.getRetail(), 0.01);
+    }
+
 }

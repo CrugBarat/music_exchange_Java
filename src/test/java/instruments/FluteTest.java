@@ -23,4 +23,11 @@ public class FluteTest {
     public void canCalculateMarkup() {
         assertEquals(482.07, flute.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        flute.applyDiscount(0.1);
+        assertEquals(4033.86, flute.getRetail(), 0.01);
+    }
+
 }

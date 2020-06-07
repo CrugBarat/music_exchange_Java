@@ -23,4 +23,11 @@ public class GuitarTest {
     public void canCalculateMarkup() {
         assertEquals(174, guitar.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        guitar.applyDiscount(0.1);
+        assertEquals(494.1, guitar.getRetail(), 0.01);
+    }
+
 }

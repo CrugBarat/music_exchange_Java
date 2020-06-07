@@ -18,4 +18,11 @@ public class MetronomeTest {
     public void canCalculateMarkup() {
         assertEquals(29.99, metronome.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        metronome.applyDiscount(0.1);
+        assertEquals(116.99, metronome.getRetail(), 0.01);
+    }
+
 }

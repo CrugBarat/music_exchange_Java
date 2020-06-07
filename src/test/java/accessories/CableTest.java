@@ -22,4 +22,11 @@ public class CableTest {
     public void canCalculateMarkup() {
         assertEquals(4.0, cable.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        cable.applyDiscount(0.1);
+        assertEquals(8.1, cable.getRetail(), 0.01);
+    }
+
 }

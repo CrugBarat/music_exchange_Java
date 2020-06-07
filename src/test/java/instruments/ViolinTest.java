@@ -23,4 +23,10 @@ public class ViolinTest {
     public void canCalculateMarkup() {
         assertEquals(499, violin.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        violin.applyDiscount(0.1);
+        assertEquals(3149.1, violin.getRetail(), 0.01);
+    }
 }

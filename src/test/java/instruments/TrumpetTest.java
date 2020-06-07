@@ -24,4 +24,10 @@ public class TrumpetTest {
         assertEquals(390, trumpet.calculateMarkup(), 0.01);
     }
 
+    @Test
+    public void canApplyDiscount() {
+        trumpet.applyDiscount(0.1);
+        assertEquals(3951.0, trumpet.getRetail(), 0.01);
+    }
+
 }

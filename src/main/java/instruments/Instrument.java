@@ -1,9 +1,10 @@
 package instruments;
+import behaviours.IClearance;
 import behaviours.IPlay;
 import behaviours.ISell;
 import enums.Category;
 
-public abstract class Instrument implements IPlay, ISell {
+public abstract class Instrument implements IPlay, ISell, IClearance {
 
     private String brand;
     private String model;
@@ -71,5 +72,9 @@ public abstract class Instrument implements IPlay, ISell {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public void applyDiscount(double discount) {
+        this.retail -= this.retail * discount;
     }
 }

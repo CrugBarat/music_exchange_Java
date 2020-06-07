@@ -23,4 +23,11 @@ public class KeysTest {
     public void canCalculateMarkup() {
         assertEquals(349, keys.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        keys.applyDiscount(0.1);
+        assertEquals(2114.1, keys.getRetail(), 0.01);
+    }
+
 }

@@ -18,4 +18,10 @@ public class HeadphoneTest {
     public void canCalculateMarkup() {
         assertEquals(99.0, headphones.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        headphones.applyDiscount(0.1);
+        assertEquals(359.1, headphones.getRetail(), 0.01);
+    }
 }

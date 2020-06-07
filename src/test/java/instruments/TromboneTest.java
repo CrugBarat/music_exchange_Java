@@ -23,4 +23,11 @@ public class TromboneTest {
     public void canCalculateMarkup() {
         assertEquals(339, trombone.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        trombone.applyDiscount(0.1);
+        assertEquals(5705.1, trombone.getRetail(), 0.01);
+    }
+
 }

@@ -23,4 +23,11 @@ public class DrumsTest {
     public void canCalculateMarkup() {
         assertEquals(795, drums.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        drums.applyDiscount(0.1);
+        assertEquals(2965.5, drums.getRetail(), 0.01);
+    }
+
 }

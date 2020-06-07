@@ -23,4 +23,11 @@ public class ClarinetTest {
     public void canCalculateMarkup() {
         assertEquals(978, clarinet.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        clarinet.applyDiscount(0.1);
+        assertEquals(7180.20, clarinet.getRetail(), 0.01);
+    }
+
 }

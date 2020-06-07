@@ -23,4 +23,11 @@ public class CelloTest {
     public void canCalculateMarkup() {
         assertEquals(421, cello.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        cello.applyDiscount(0.1);
+        assertEquals(2277.90, cello.getRetail(), 0.01);
+    }
+
 }

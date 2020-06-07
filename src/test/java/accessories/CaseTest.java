@@ -22,4 +22,11 @@ public class CaseTest {
     public void canCalculateMarkup() {
         assertEquals(67.93, guitarCase.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        guitarCase.applyDiscount(0.1);
+        assertEquals(511.14, guitarCase.getRetail(), 0.01);
+    }
+
 }

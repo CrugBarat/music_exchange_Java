@@ -18,4 +18,11 @@ public class MicrophoneTest {
     public void canCalculateMarkup() {
         assertEquals(546.0, microphone.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canApplyDiscount() {
+        microphone.applyDiscount(0.1);
+        assertEquals(3191.4, microphone.getRetail(), 0.01);
+    }
+
 }
