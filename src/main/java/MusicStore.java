@@ -6,10 +6,12 @@ public class MusicStore {
 
     private String name;
     private HashMap<ISell, Integer> stock;
+    private double sales;
 
     public MusicStore(String name) {
         this.name = name;
         this.stock = new HashMap<ISell, Integer>();
+        this.sales = 0;
     }
 
     public String getName() {
@@ -18,6 +20,10 @@ public class MusicStore {
 
     public HashMap<ISell, Integer> getStock() {
         return stock;
+    }
+
+    public double getSales() {
+        return sales;
     }
 
     public void setName(String name) {
@@ -67,5 +73,12 @@ public class MusicStore {
             potentialProfit += potentialStockProfit;
         }
         return potentialProfit;
+    }
+
+    public void sellItem(ISell item) {
+        if(getStockAmount(item) > 0) {
+            decreaseStock(item);
+            this.sales += item.getRetail();
+        }
     }
 }

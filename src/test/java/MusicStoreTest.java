@@ -93,4 +93,24 @@ public class MusicStoreTest {
         musicStore.increaseStock(stockItem2);
         assertEquals(657.86, musicStore.calculatePotentialProfit(), 0.01);
     }
+
+    @Test
+    public void canSellItem() {
+        musicStore.increaseStock(stockItem);
+        musicStore.sellItem(stockItem);
+        assertEquals(549.0, musicStore.getSales(), 0.01);
+        assertEquals(0, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void canSellMultipleItems() {
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem2);
+        musicStore.sellItem(stockItem);
+        musicStore.sellItem(stockItem2);
+        assertEquals(1116.93, musicStore.getSales(), 0.01);
+        assertEquals(0, musicStore.getStockAmount(stockItem));
+        assertEquals(0, musicStore.getStockAmount(stockItem2));
+    }
+
 }
