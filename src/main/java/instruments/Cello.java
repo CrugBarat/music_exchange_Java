@@ -1,6 +1,8 @@
 package instruments;
 
-public class Cello extends Instrument {
+import behaviours.IPlay;
+
+public class Cello extends Instrument implements IPlay {
 
     private String size;
     private String body;
@@ -35,5 +37,9 @@ public class Cello extends Instrument {
 
     public void setFinish(String finish) {
         this.finish = finish;
+    }
+
+    public String play() {
+        return "bring bring";
     }
 }
