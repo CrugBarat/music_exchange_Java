@@ -5,8 +5,8 @@ public class Microphone extends Accessory {
     private double cableLength;
     private String connectiontYPE;
 
-    public Microphone(String brand, String model, double cableLength, String connectiontYPE) {
-        super(brand, model);
+    public Microphone(String brand, String model, double cost, double retail, double cableLength, String connectiontYPE) {
+        super(brand, model, cost, retail);
         this.cableLength = cableLength;
         this.connectiontYPE = connectiontYPE;
     }

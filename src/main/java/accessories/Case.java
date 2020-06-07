@@ -6,8 +6,8 @@ public class Case extends Accessory{
 
     private Instrument instrument;
 
-    public Case(String brand, String model, Instrument instrument) {
-        super(brand, model);
+    public Case(String brand, String model, double cost, double retail, Instrument instrument) {
+        super(brand, model, cost, retail);
         this.instrument = instrument;
     }
 

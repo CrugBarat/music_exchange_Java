@@ -6,8 +6,8 @@ public class Metronome extends Accessory{
     private int tempoEndRange;
     private String powerSupply;
 
-    public Metronome(String brand, String model, int tempoStartRange, int tempoEndRange, String powerSupply) {
-        super(brand, model);
+    public Metronome(String brand, String model, double cost, double retail, int tempoStartRange, int tempoEndRange, String powerSupply) {
+        super(brand, model, cost, retail);
         this.tempoStartRange = tempoStartRange;
         this.tempoEndRange = tempoEndRange;
         this.powerSupply = powerSupply;

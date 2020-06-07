@@ -7,8 +7,8 @@ public class Cable extends Accessory {
     private Instrument instrument;
     private double length;
 
-    public Cable(String brand, String model, Instrument instrument, double length) {
-        super(brand, model);
+    public Cable(String brand, String model, double cost, double retail, Instrument instrument, double length) {
+        super(brand, model, cost, retail);
         this.instrument = instrument;
         this.length = length;
     }

@@ -7,8 +7,8 @@ public class Stand extends Accessory {
     private Instrument instrument;
     private String dimensions;
 
-    public Stand(String brand, String model, Instrument instrument, String dimensions) {
-        super(brand, model);
+    public Stand(String brand, String model, double cost, double retail, Instrument instrument, String dimensions) {
+        super(brand, model, cost, retail);
         this.instrument = instrument;
         this.dimensions = dimensions;
     }

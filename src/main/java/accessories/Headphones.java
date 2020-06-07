@@ -5,8 +5,8 @@ public class Headphones extends Accessory{
     private double cableLength;
     private double jackSize;
 
-    public Headphones(String brand, String model, double cableLength, double jackSize) {
-        super(brand, model);
+    public Headphones(String brand, String model, double cost, double retail, double cableLength, double jackSize) {
+        super(brand, model, cost, retail);
         this.cableLength = cableLength;
         this.jackSize = jackSize;
     }
