@@ -85,12 +85,14 @@ public class MusicStore {
         if(getStockAmount(item) > 0) {
             decreaseStock(item);
             this.sales += item.getRetail();
+            increaseSaleItemAmount(item);
         }
     }
 
     public void returnItem(ISell item) {
        this.sales -= item.getRetail();
        increaseStock(item);
+       decreaseSaleItemAmount(item);
     }
 
     public int getTrackSaleSize() {

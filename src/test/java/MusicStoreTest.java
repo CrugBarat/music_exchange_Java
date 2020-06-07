@@ -100,6 +100,7 @@ public class MusicStoreTest {
         musicStore.sellItem(stockItem);
         assertEquals(549.0, musicStore.getSales(), 0.01);
         assertEquals(0, musicStore.getStockAmount(stockItem));
+        assertEquals(1, musicStore.getSaleItemAmount(stockItem));
     }
 
     @Test
@@ -111,13 +112,17 @@ public class MusicStoreTest {
         assertEquals(1116.93, musicStore.getSales(), 0.01);
         assertEquals(0, musicStore.getStockAmount(stockItem));
         assertEquals(0, musicStore.getStockAmount(stockItem2));
+        assertEquals(1, musicStore.getSaleItemAmount(stockItem));
+        assertEquals(1, musicStore.getSaleItemAmount(stockItem2));
     }
 
     @Test
     public void canReturnItem() {
+        musicStore.sellItem(stockItem);
         musicStore.returnItem(stockItem);
         assertEquals(-549.0, musicStore.getSales(), 0.01);
         assertEquals(1, musicStore.getStockAmount(stockItem));
+        assertEquals(0, musicStore.getSaleItemAmount(stockItem));
     }
 
     @Test
