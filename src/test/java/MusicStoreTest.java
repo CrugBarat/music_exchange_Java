@@ -3,6 +3,7 @@ import instruments.Guitar;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class MusicStoreTest {
 
@@ -53,5 +54,30 @@ public class MusicStoreTest {
         musicStore.increaseStock(stockItem);
         musicStore.decreaseStock(stockItem);
         assertEquals(2, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void stockAmountIsZeroIfNoStock() {
+        assertEquals(0, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void cannotDecreaseStockIfNoStock() {
+        musicStore.decreaseStock(stockItem);
+        assertEquals(0, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void stockAmountCannotBeNegative() {
+        musicStore.increaseStock(stockItem);
+        musicStore.decreaseStock(stockItem);
+        musicStore.decreaseStock(stockItem);
+        assertEquals(0, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void canIncreaseStockAmountIfInitiallyNoStock() {
+        musicStore.increaseStock(stockItem);
+        assertEquals(1, musicStore.getStockAmount(stockItem));
     }
 }

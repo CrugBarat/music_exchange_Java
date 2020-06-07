@@ -36,7 +36,9 @@ public class MusicStore {
     }
 
     public int getStockAmount(ISell stockItem) {
-        return this.stock.get(stockItem);
+        if (this.stock.containsKey(stockItem)) {
+            return this.stock.get(stockItem);
+        } else return 0;
     }
 
     public void increaseStock(ISell stockItem) {
