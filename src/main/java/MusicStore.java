@@ -90,9 +90,11 @@ public class MusicStore {
     }
 
     public void returnItem(ISell item) {
-       this.sales -= item.getRetail();
-       increaseStock(item);
-       decreaseSaleItemAmount(item);
+        if(getSaleItemAmount(item) > 0) {
+            this.sales -= item.getRetail();
+            increaseStock(item);
+            decreaseSaleItemAmount(item);
+        }
     }
 
     public int getTrackSaleSize() {

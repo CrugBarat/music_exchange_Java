@@ -126,6 +126,14 @@ public class MusicStoreTest {
     }
 
     @Test
+    public void cannotReturnItemIfNotBeenSold() {
+        musicStore.returnItem(stockItem);
+        assertEquals(0, musicStore.getSales(), 0.01);
+        assertEquals(0, musicStore.getStockAmount(stockItem));
+        assertEquals(0, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
     public void canAddItemToTrackSales() {
         musicStore.addSaleItem(stockItem, 1);
         assertEquals(1, musicStore.getTrackSaleSize());
