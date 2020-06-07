@@ -1,6 +1,7 @@
 package accessories;
 
 import behaviours.ISell;
+import enums.Category;
 
 public abstract class Accessory implements ISell {
 
@@ -8,12 +9,14 @@ public abstract class Accessory implements ISell {
     private String model;
     private double cost;
     private double retail;
+    private Category category;
 
-    public Accessory(String brand, String model, double cost, double retail) {
+    public Accessory(String brand, String model, double cost, double retail, Category category) {
         this.brand = brand;
         this.model = model;
         this.cost = cost;
         this.retail = retail;
+        this.category = category;
     }
 
     public String getBrand() {
@@ -30,6 +33,10 @@ public abstract class Accessory implements ISell {
 
     public double getRetail() {
         return retail;
+    }
+
+    public Category getCategory() {
+        return category;
     }
 
     public void setBrand(String brand) {
@@ -50,5 +57,9 @@ public abstract class Accessory implements ISell {
 
     public double calculateMarkup() {
         return this.retail - this.cost;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

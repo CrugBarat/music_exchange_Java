@@ -1,6 +1,7 @@
 package instruments;
 
 import behaviours.IPlay;
+import enums.Category;
 
 public class Clarinet extends Instrument implements IPlay {
 
@@ -8,8 +9,8 @@ public class Clarinet extends Instrument implements IPlay {
     private String body;
     private String mouthpiece;
 
-    public Clarinet(String brand, String model, String type, double cost, double retail, double bore, String body, String mouthpiece) {
-        super(brand, model, type, cost, retail);
+    public Clarinet(String brand, String model, String type, double cost, double retail, Category category, double bore, String body, String mouthpiece) {
+        super(brand, model, type, cost, retail, category);
         this.bore = bore;
         this.body = body;
         this.mouthpiece = mouthpiece;

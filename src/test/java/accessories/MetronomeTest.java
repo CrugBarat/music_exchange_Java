@@ -1,4 +1,5 @@
 package accessories;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class MetronomeTest {
 
     @Before
     public void before() {
-        metronome = new Metronome("Peterson", "BodyBeat Sync", 100.0, 129.99, 10, 280, "Lithium Ion Battery");
+        metronome = new Metronome("Peterson", "BodyBeat Sync", 100.0, 129.99, Category.ACCESSORY, 10, 280, "Lithium Ion Battery");
     }
 
     @Test

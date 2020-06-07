@@ -1,14 +1,15 @@
 package instruments;
 
 import behaviours.IPlay;
+import enums.Category;
 
 public class Xylophone extends Instrument implements IPlay {
 
     private String material;
     private String octaveRanges;
 
-    public Xylophone(String brand, String model, String type, double cost, double retail, String material, String octaveRanges) {
-        super(brand, model, type, cost, retail);
+    public Xylophone(String brand, String model, String type, double cost, double retail, Category category, String material, String octaveRanges) {
+        super(brand, model, type, cost, retail, category);
         this.material = material;
         this.octaveRanges = octaveRanges;
     }

@@ -1,4 +1,5 @@
 package accessories;
+import enums.Category;
 import instruments.Guitar;
 import instruments.Instrument;
 import org.junit.Before;
@@ -13,8 +14,8 @@ public class PedalTest {
 
     @Before
     public void before() {
-        instrument = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
-        pedal = new Pedal("Gamechanger", "Audio Plus", 300.0, 339.0, instrument, 3.0);
+        instrument = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, Category.GUITAR, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
+        pedal = new Pedal("Gamechanger", "Audio Plus", 300.0, 339.0, Category.ACCESSORY, instrument, 3.0);
     }
 
     @Test

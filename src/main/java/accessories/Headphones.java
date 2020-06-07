@@ -1,12 +1,14 @@
 package accessories;
 
+import enums.Category;
+
 public class Headphones extends Accessory{
 
     private double cableLength;
     private double jackSize;
 
-    public Headphones(String brand, String model, double cost, double retail, double cableLength, double jackSize) {
-        super(brand, model, cost, retail);
+    public Headphones(String brand, String model, double cost, double retail, Category category, double cableLength, double jackSize) {
+        super(brand, model, cost, retail, category);
         this.cableLength = cableLength;
         this.jackSize = jackSize;
     }

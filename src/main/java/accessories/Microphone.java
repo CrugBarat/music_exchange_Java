@@ -1,12 +1,14 @@
 package accessories;
 
+import enums.Category;
+
 public class Microphone extends Accessory {
 
     private double cableLength;
     private String connectionType;
 
-    public Microphone(String brand, String model, double cost, double retail, double cableLength, String connectionType) {
-        super(brand, model, cost, retail);
+    public Microphone(String brand, String model, double cost, double retail, Category category, double cableLength, String connectionType) {
+        super(brand, model, cost, retail, category);
         this.cableLength = cableLength;
         this.connectionType = connectionType;
     }

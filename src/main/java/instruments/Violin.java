@@ -1,14 +1,15 @@
 package instruments;
 
 import behaviours.IPlay;
+import enums.Category;
 
 public class Violin extends Instrument implements IPlay {
 
     private String size;
     private String bow;
 
-    public Violin(String brand, String model, String type, double cost, double retail, String size, String bow) {
-        super(brand, model, type, cost, retail);
+    public Violin(String brand, String model, String type, double cost, double retail, Category category, String size, String bow) {
+        super(brand, model, type, cost, retail, category);
         this.size = size;
         this.bow = bow;
     }

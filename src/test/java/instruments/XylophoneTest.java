@@ -1,4 +1,5 @@
 package instruments;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class XylophoneTest {
 
     @Before
     public void before() {
-        xylophone = new Xylophone("Yamaha", "YX35G", "Wood", 1500.0, 1748.13, "Padauk Wood", "3.5 Octaves");
+        xylophone = new Xylophone("Yamaha", "YX35G", "Wood", 1500.0, 1748.13, Category.PERCUSSION, "Padauk Wood", "3.5 Octaves");
     }
 
     @Test

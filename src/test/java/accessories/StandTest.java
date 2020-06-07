@@ -1,4 +1,5 @@
 package accessories;
+import enums.Category;
 import instruments.Instrument;
 import instruments.Keys;
 import org.junit.Before;
@@ -13,8 +14,8 @@ public class StandTest {
 
     @Before
     public void before() {
-        instrument = new Keys("Yamaha", "Genos", "Electric", 3500.0, 4071.0, 76, 1234, 13.0);
-        stand = new Stand("Yamaha", "L7B", 150.0, 189.25, instrument, "1040x695x515");
+        instrument = new Keys("Yamaha", "Genos", "Electric", 3500.0, 4071.0, Category.KEYS, 76, 1234, 13.0);
+        stand = new Stand("Yamaha", "L7B", 150.0, 189.25, Category.ACCESSORY, instrument, "1040x695x515");
     }
 
     @Test

@@ -1,5 +1,6 @@
 package accessories;
 
+import enums.Category;
 import instruments.Instrument;
 
 public class Stand extends Accessory {
@@ -7,8 +8,8 @@ public class Stand extends Accessory {
     private Instrument instrument;
     private String dimensions;
 
-    public Stand(String brand, String model, double cost, double retail, Instrument instrument, String dimensions) {
-        super(brand, model, cost, retail);
+    public Stand(String brand, String model, double cost, double retail, Category category, Instrument instrument, String dimensions) {
+        super(brand, model, cost, retail, category);
         this.instrument = instrument;
         this.dimensions = dimensions;
     }

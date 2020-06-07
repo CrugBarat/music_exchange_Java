@@ -1,4 +1,5 @@
 package accessories;
+import enums.Category;
 import instruments.Guitar;
 import instruments.Instrument;
 import org.junit.Before;
@@ -13,8 +14,8 @@ public class CableTest {
 
     @Before
     public void before() {
-        instrument = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
-        cable = new Cable("Roland", "Straight Instrument Cable", 5.0, 9.0, instrument, 1);
+        instrument = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, Category.GUITAR,  "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
+        cable = new Cable("Roland", "Straight Instrument Cable", 5.0, 9.0, Category.ACCESSORY, instrument, 1);
     }
 
     @Test

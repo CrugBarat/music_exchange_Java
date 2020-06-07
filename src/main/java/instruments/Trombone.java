@@ -1,6 +1,7 @@
 package instruments;
 
 import behaviours.IPlay;
+import enums.Category;
 
 public class Trombone extends Instrument implements IPlay {
 
@@ -8,8 +9,8 @@ public class Trombone extends Instrument implements IPlay {
     private double bellDiameter;
     private double boreDiameter;
 
-    public Trombone(String brand, String model, String type, double cost, double retail, String bodyDesign, double bellDiameter, double boreDiameter) {
-        super(brand, model, type, cost, retail);
+    public Trombone(String brand, String model, String type, double cost, double retail, Category category, String bodyDesign, double bellDiameter, double boreDiameter) {
+        super(brand, model, type, cost, retail, category);
         this.bodyDesign = bodyDesign;
         this.bellDiameter = bellDiameter;
         this.boreDiameter = boreDiameter;

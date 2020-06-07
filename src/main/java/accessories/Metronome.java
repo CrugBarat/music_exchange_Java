@@ -1,13 +1,15 @@
 package accessories;
 
+import enums.Category;
+
 public class Metronome extends Accessory{
 
     private int tempoStartRange;
     private int tempoEndRange;
     private String powerSupply;
 
-    public Metronome(String brand, String model, double cost, double retail, int tempoStartRange, int tempoEndRange, String powerSupply) {
-        super(brand, model, cost, retail);
+    public Metronome(String brand, String model, double cost, double retail, Category category, int tempoStartRange, int tempoEndRange, String powerSupply) {
+        super(brand, model, cost, retail, category);
         this.tempoStartRange = tempoStartRange;
         this.tempoEndRange = tempoEndRange;
         this.powerSupply = powerSupply;

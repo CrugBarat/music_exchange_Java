@@ -1,4 +1,5 @@
 package accessories;
+import enums.Category;
 import instruments.Guitar;
 import instruments.Instrument;
 import org.junit.Before;
@@ -13,8 +14,8 @@ public class CaseTest {
 
     @Before
     public void before() {
-        instrument = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
-        guitarCase = new Case("BAM", "8004XL", 500.0, 567.93, instrument);
+        instrument = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, Category.GUITAR,"22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
+        guitarCase = new Case("BAM", "8004XL", 500.0, 567.93, Category.ACCESSORY, instrument);
     }
 
     @Test

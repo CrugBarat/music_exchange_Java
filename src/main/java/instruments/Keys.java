@@ -1,13 +1,15 @@
 package instruments;
 
+import enums.Category;
+
 public class Keys extends Instrument {
 
     private int numberOfKeys;
     private double length;
     private double weight;
 
-    public Keys(String brand, String model, String type, double cost, double retail, int numberOfKeys, double length, double weight) {
-        super(brand, model, type, cost, retail);
+    public Keys(String brand, String model, String type, double cost, double retail, Category category, int numberOfKeys, double length, double weight) {
+        super(brand, model, type, cost, retail, category);
         this.numberOfKeys = numberOfKeys;
         this.length = length;
         this.weight = weight;

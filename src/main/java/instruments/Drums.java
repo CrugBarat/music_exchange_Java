@@ -1,5 +1,7 @@
 package instruments;
 
+import enums.Category;
+
 public class Drums extends Instrument {
 
     private String kickDrumSpec;
@@ -8,8 +10,8 @@ public class Drums extends Instrument {
     private String rackTom2Spec;
     private String floorTomSpec;
 
-    public Drums(String brand, String model, String type, double cost, double retail, String kickDrumSpec, String snareDrumSpec, String rackTom1Spec, String rackTom2Spec, String floorTomSpec) {
-        super(brand, model, type, cost, retail);
+    public Drums(String brand, String model, String type, double cost, double retail, Category category, String kickDrumSpec, String snareDrumSpec, String rackTom1Spec, String rackTom2Spec, String floorTomSpec) {
+        super(brand, model, type, cost, retail, category);
         this.kickDrumSpec = kickDrumSpec;
         this.snareDrumSpec = snareDrumSpec;
         this.rackTom1Spec = rackTom1Spec;

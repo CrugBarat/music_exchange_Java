@@ -1,5 +1,7 @@
 package instruments;
 
+import enums.Category;
+
 public class Guitar extends Instrument {
 
     private String frets;
@@ -8,8 +10,8 @@ public class Guitar extends Instrument {
     private String body;
     private String neck;
 
-    public Guitar(String brand, String model, String type, double cost, double retail, String frets, int scale, String fretboard, String body, String neck) {
-        super(brand, model, type, cost, retail);
+    public Guitar(String brand, String model, String type, double cost, double retail, Category category, String frets, int scale, String fretboard, String body, String neck) {
+        super(brand, model, type, cost, retail, category);
         this.frets = frets;
         this.scale = scale;
         this.fretboard = fretboard;

@@ -1,4 +1,5 @@
 package instruments;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class TambourineTest {
 
     @Before
     public void before() {
-        tambourine = new Tambourine("Meinl Artisan Edition", "Compact 8 Inch", "3 Rows", 75.0, 114.0, "circle", "maple");
+        tambourine = new Tambourine("Meinl Artisan Edition", "Compact 8 Inch", "3 Rows", 75.0, 114.0, Category.PERCUSSION, "circle", "maple");
     }
 
     @Test

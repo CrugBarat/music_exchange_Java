@@ -1,4 +1,5 @@
 package accessories;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class HeadphoneTest {
 
     @Before
     public void before() {
-        headphones = new Headphones("Neumann", "NDH 20", 300.00, 399.0, 3.0, 3.5);
+        headphones = new Headphones("Neumann", "NDH 20", 300.00, 399.0, Category.ACCESSORY, 3.0, 3.5);
     }
 
     @Test

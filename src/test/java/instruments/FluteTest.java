@@ -1,4 +1,5 @@
 package instruments;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class FluteTest {
 
     @Before
     public void before() {
-        flute = new Flute("Yamaha", "YFL677H", "Handmade", 4000.0, 4482.07, "Sterling Silver", "Offset G");
+        flute = new Flute("Yamaha", "YFL677H", "Handmade", 4000.0, 4482.07, Category.WOODWIND, "Sterling Silver", "Offset G");
     }
 
     @Test

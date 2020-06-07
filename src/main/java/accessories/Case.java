@@ -1,13 +1,14 @@
 package accessories;
 
+import enums.Category;
 import instruments.Instrument;
 
 public class Case extends Accessory{
 
     private Instrument instrument;
 
-    public Case(String brand, String model, double cost, double retail, Instrument instrument) {
-        super(brand, model, cost, retail);
+    public Case(String brand, String model, double cost, double retail, Category category, Instrument instrument) {
+        super(brand, model, cost, retail, category);
         this.instrument = instrument;
     }
 

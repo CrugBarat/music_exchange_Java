@@ -1,4 +1,5 @@
 package instruments;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        guitar = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
+        guitar = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, Category.GUITAR,"22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
     }
 
     @Test

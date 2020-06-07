@@ -1,5 +1,6 @@
 import accessories.Case;
 import behaviours.ISell;
+import enums.Category;
 import instruments.Guitar;
 import instruments.Instrument;
 import org.junit.Before;
@@ -14,8 +15,8 @@ public class MusicStoreTest {
     @Before
     public void before() {
         musicStore =new MusicStore("HMV");
-        stockItem = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
-        stockItem2 = new Case("BAM", "8004XL", 500.0, 567.93, (Instrument) stockItem);
+        stockItem = new Guitar("Fender", "Player 0144503506", "Electric", 375.0, 549.0, Category.GUITAR, "22 Medium Jumbo", 25, "Pau Ferro", "Alder", "Maple");
+        stockItem2 = new Case("BAM", "8004XL", 500.0, 567.93, Category.ACCESSORY, (Instrument) stockItem);
     }
 
     @Test

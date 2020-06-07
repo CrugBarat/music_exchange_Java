@@ -1,14 +1,15 @@
 package instruments;
 
 import behaviours.IPlay;
+import enums.Category;
 
 public class Tambourine extends Instrument implements IPlay {
 
     private String shape;
     private String frame;
 
-    public Tambourine(String brand, String model, String type, double cost, double retail, String shape, String frame) {
-        super(brand, model, type, cost, retail);
+    public Tambourine(String brand, String model, String type, double cost, double retail, Category category, String shape, String frame) {
+        super(brand, model, type, cost, retail, category);
         this.shape = shape;
         this.frame = frame;
     }

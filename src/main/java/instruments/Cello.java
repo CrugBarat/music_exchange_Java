@@ -1,6 +1,7 @@
 package instruments;
 
 import behaviours.IPlay;
+import enums.Category;
 
 public class Cello extends Instrument implements IPlay {
 
@@ -8,8 +9,8 @@ public class Cello extends Instrument implements IPlay {
     private String body;
     private String finish;
 
-    public Cello(String brand, String model, String type, double cost, double retail, String size, String body, String finish) {
-        super(brand, model, type, cost, retail);
+    public Cello(String brand, String model, String type, double cost, double retail, Category category, String size, String body, String finish) {
+        super(brand, model, type, cost, retail, category);
         this.size = size;
         this.body = body;
         this.finish = finish;

@@ -1,11 +1,13 @@
 package accessories;
 
+import enums.Category;
+
 public class ManuscriptPaper extends Accessory {
 
     private int numberOfSheets;
 
-    public ManuscriptPaper(String brand, String model, double cost, double retail, int numberOfSheets) {
-        super(brand, model, cost, retail);
+    public ManuscriptPaper(String brand, String model, double cost, double retail, Category category, int numberOfSheets) {
+        super(brand, model, cost, retail, category);
         this.numberOfSheets = numberOfSheets;
     }
 

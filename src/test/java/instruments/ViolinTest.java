@@ -1,4 +1,5 @@
 package instruments;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class ViolinTest {
 
     @Before
     public void before() {
-        violin = new Violin("Wood Viper", "5 String", "Electric", 3000.0, 3499.0, "Full", "Wood");
+        violin = new Violin("Wood Viper", "5 String", "Electric", 3000.0, 3499.0, Category.STRINGS, "Full", "Wood");
     }
 
     @Test

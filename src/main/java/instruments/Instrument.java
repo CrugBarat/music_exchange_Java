@@ -1,6 +1,7 @@
 package instruments;
 import behaviours.IPlay;
 import behaviours.ISell;
+import enums.Category;
 
 public abstract class Instrument implements IPlay, ISell {
 
@@ -9,13 +10,15 @@ public abstract class Instrument implements IPlay, ISell {
     private String type;
     private double cost;
     private double retail;
+    private Category category;
 
-    public Instrument(String brand, String model, String type, double cost, double retail) {
+    public Instrument(String brand, String model, String type, double cost, double retail, Category category) {
         this.brand = brand;
         this.model = model;
         this.type = type;
         this.cost = cost;
         this.retail = retail;
+        this.category = category;
     }
 
     public String getBrand() {
@@ -36,6 +39,10 @@ public abstract class Instrument implements IPlay, ISell {
 
     public double getRetail() {
         return this.retail;
+    }
+
+    public Category getCategory() {
+        return category;
     }
 
     public void setBrand(String brand) {
@@ -62,4 +69,7 @@ public abstract class Instrument implements IPlay, ISell {
         return this.retail - this.cost;
     }
 
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }

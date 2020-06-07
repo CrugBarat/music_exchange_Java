@@ -1,4 +1,5 @@
 package instruments;
+import enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class ClarinetTest {
 
     @Before
     public void before() {
-        clarinet = new Clarinet("Yamaha", "YCL622", "Bass", 7000.0, 7978.0, 0.584, "Grenadilla", "Hard Rubber");
+        clarinet = new Clarinet("Yamaha", "YCL622", "Bass", 7000.0, 7978.0, Category.WOODWIND, 0.584, "Grenadilla", "Hard Rubber");
     }
 
     @Test
