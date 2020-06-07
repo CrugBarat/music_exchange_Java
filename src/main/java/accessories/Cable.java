@@ -2,12 +2,13 @@ package accessories;
 
 import instruments.Instrument;
 
-public class Cable {
+public class Cable extends Accessory {
 
     private Instrument instrument;
     private double length;
 
-    public Cable(Instrument instrument, double length) {
+    public Cable(String brand, String model, Instrument instrument, double length) {
+        super(brand, model);
         this.instrument = instrument;
         this.length = length;
     }
