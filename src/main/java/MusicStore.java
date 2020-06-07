@@ -34,4 +34,26 @@ public class MusicStore {
     public void removeStockItem(ISell stockItem) {
         this.stock.remove(stockItem);
     }
+
+    public int getStockAmount(ISell stockItem) {
+        return this.stock.get(stockItem);
+    }
+
+    public void increaseStock(ISell stockItem) {
+        if (!this.stock.containsKey(stockItem)) {
+            addStockItem(stockItem, 1);
+        } else {
+            int value = getStockAmount(stockItem) + 1;
+            this.stock.replace(stockItem, value);
+        }
+    }
+
+    public void decreaseStock(ISell stockItem) {
+        if (this.stock.containsKey(stockItem)) {
+            if(getStockAmount(stockItem) > 0) {
+                int value = getStockAmount(stockItem) - 1;
+                this.stock.replace(stockItem, value);
+            }
+        }
+    }
 }

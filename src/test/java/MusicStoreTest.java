@@ -32,4 +32,26 @@ public class MusicStoreTest {
         musicStore.removeStockItem(stockItem);
         assertEquals(0, musicStore.getStockSize());
     }
+
+    @Test
+    public void canGetStockAmount() {
+        musicStore.addStockItem(stockItem, 1);
+        assertEquals(1, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void canIncreaseStockAmount() {
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem);
+        assertEquals(2, musicStore.getStockAmount(stockItem));
+    }
+
+    @Test
+    public void canDecreaseStockAmount() {
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem);
+        musicStore.decreaseStock(stockItem);
+        assertEquals(2, musicStore.getStockAmount(stockItem));
+    }
 }
