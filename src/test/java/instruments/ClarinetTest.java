@@ -17,4 +17,9 @@ public class ClarinetTest {
     public void canPlay() {
         assertEquals("Doodle doodle doodle det", clarinet.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(978, clarinet.calculateMarkup(), 0.01);
+    }
 }

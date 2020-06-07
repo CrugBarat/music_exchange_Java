@@ -17,4 +17,9 @@ public class XylophoneTest {
     public void canPlay() {
         assertEquals("ding ding ding", xylophone.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(248.13, xylophone.calculateMarkup(), 0.01);
+    }
 }

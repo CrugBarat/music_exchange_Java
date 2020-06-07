@@ -17,4 +17,9 @@ public class ViolinTest {
     public void canPlay() {
         assertEquals("Pling pling-a-pling", violin.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(499, violin.calculateMarkup(), 0.01);
+    }
 }

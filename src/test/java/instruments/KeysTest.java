@@ -17,4 +17,9 @@ public class KeysTest {
     public void canPlay() {
         assertEquals("ding ding", keys.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(349, keys.calculateMarkup(), 0.01);
+    }
 }

@@ -17,4 +17,9 @@ public class TromboneTest {
     public void canPlay() {
         assertEquals("Wah, wah, wah", trombone.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(339, trombone.calculateMarkup(), 0.01);
+    }
 }

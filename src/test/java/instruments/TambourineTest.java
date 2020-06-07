@@ -17,4 +17,9 @@ public class TambourineTest {
     public void canPlay() {
         assertEquals("Chicka, chicka, chicka", tambourine.play());
     }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(39, tambourine.calculateMarkup(), 0.01);
+    }
 }
