@@ -4,22 +4,22 @@ import behaviours.IPlay;
 
 public class Trumpet extends Instrument implements IPlay {
 
-    private int bellDiameter;
-    private int boreDiameter;
+    private double bellDiameter;
+    private double boreDiameter;
     private String bodyMaterial;
 
-    public Trumpet(String brand, String model, String type, double cost, double retail, int bellDiameter, int boreDiameter, String bodyMaterial) {
+    public Trumpet(String brand, String model, String type, double cost, double retail, double bellDiameter, double boreDiameter, String bodyMaterial) {
         super(brand, model, type, cost, retail);
         this.bellDiameter = bellDiameter;
         this.boreDiameter = boreDiameter;
         this.bodyMaterial = bodyMaterial;
     }
 
-    public int getBellDiameter() {
+    public double getBellDiameter() {
         return bellDiameter;
     }
 
-    public int getBoreDiameter() {
+    public double getBoreDiameter() {
         return boreDiameter;
     }
 
@@ -27,11 +27,11 @@ public class Trumpet extends Instrument implements IPlay {
         return bodyMaterial;
     }
 
-    public void setBellDiameter(int bellDiameter) {
+    public void setBellDiameter(double bellDiameter) {
         this.bellDiameter = bellDiameter;
     }
 
-    public void setBoreDiameter(int boreDiameter) {
+    public void setBoreDiameter(double boreDiameter) {
         this.boreDiameter = boreDiameter;
     }
 
