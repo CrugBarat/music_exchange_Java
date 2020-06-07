@@ -3,12 +3,12 @@ package accessories;
 public class Microphone extends Accessory {
 
     private double cableLength;
-    private String connectiontYPE;
+    private String connectionType;
 
-    public Microphone(String brand, String model, double cost, double retail, double cableLength, String connectiontYPE) {
+    public Microphone(String brand, String model, double cost, double retail, double cableLength, String connectionType) {
         super(brand, model, cost, retail);
         this.cableLength = cableLength;
-        this.connectiontYPE = connectiontYPE;
+        this.connectionType = connectionType;
     }
 
     public double getCableLength() {
@@ -16,14 +16,14 @@ public class Microphone extends Accessory {
     }
 
     public String getConnectiontYPE() {
-        return connectiontYPE;
+        return connectionType;
     }
 
     public void setCableLength(double cableLength) {
         this.cableLength = cableLength;
     }
 
-    public void setConnectiontYPE(String connectiontYPE) {
-        this.connectiontYPE = connectiontYPE;
+    public void setConnectiontYPE(String connectionType) {
+        this.connectionType = connectionType;
     }
 }
