@@ -120,4 +120,64 @@ public class MusicStoreTest {
         assertEquals(1, musicStore.getStockAmount(stockItem));
     }
 
+    @Test
+    public void canAddItemToTrackSales() {
+        musicStore.addSaleItem(stockItem, 1);
+        assertEquals(1, musicStore.getTrackSaleSize());
+    }
+
+    @Test
+    public void canRemoveItemFromTrackSales() {
+        musicStore.addSaleItem(stockItem, 1);
+        musicStore.removeSaleItem(stockItem);
+        assertEquals(0, musicStore.getTrackSaleSize());
+    }
+
+    @Test
+    public void canGetSaleAmount() {
+        musicStore.addSaleItem(stockItem, 1);
+        assertEquals(1, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void canIncreaseSaleAmount() {
+        musicStore.increaseSaleItemAmount(stockItem);
+        musicStore.increaseSaleItemAmount(stockItem);
+        assertEquals(2, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void canDecreaseSaleItem() {
+        musicStore.increaseSaleItemAmount(stockItem);
+        musicStore.increaseSaleItemAmount(stockItem);
+        musicStore.increaseSaleItemAmount(stockItem);
+        musicStore.decreaseSaleItemAmount(stockItem);
+        assertEquals(2, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void saleItemAmountIsZeroIfNoStock() {
+        assertEquals(0, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void cannotDecreaseSaleAmountIfNoPreviousSale() {
+        musicStore.decreaseSaleItemAmount(stockItem);
+        assertEquals(0, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void saleAmountCannotBeNegative() {
+        musicStore.increaseSaleItemAmount(stockItem);
+        musicStore.decreaseSaleItemAmount(stockItem);
+        musicStore.decreaseSaleItemAmount(stockItem);
+        assertEquals(0, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void canIncreaseSaleAmountIfInitiallyNoSales() {
+        musicStore.increaseSaleItemAmount(stockItem);
+        assertEquals(1, musicStore.getSaleItemAmount(stockItem));
+    }
+
 }

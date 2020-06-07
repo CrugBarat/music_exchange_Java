@@ -7,11 +7,13 @@ public class MusicStore {
     private String name;
     private HashMap<ISell, Integer> stock;
     private double sales;
+    private HashMap<ISell, Integer> trackSales;
 
     public MusicStore(String name) {
         this.name = name;
         this.stock = new HashMap<ISell, Integer>();
         this.sales = 0;
+        this.trackSales = new HashMap<ISell, Integer>();
     }
 
     public String getName() {
@@ -24,6 +26,10 @@ public class MusicStore {
 
     public double getSales() {
         return sales;
+    }
+
+    public HashMap<ISell, Integer> getTrackSales() {
+        return trackSales;
     }
 
     public void setName(String name) {
@@ -85,5 +91,39 @@ public class MusicStore {
     public void returnItem(ISell item) {
        this.sales -= item.getRetail();
        increaseStock(item);
+    }
+
+    public int getTrackSaleSize() {
+        return this.trackSales.size();
+    }
+
+    public void addSaleItem(ISell stockItem, int i) {
+        this.trackSales.put(stockItem, i);
+    }
+
+    public void removeSaleItem(ISell stockItem) {
+        this.trackSales.remove(stockItem);
+    }
+
+    public int getSaleItemAmount(ISell stockItem) {
+        return this.trackSales.getOrDefault(stockItem, 0);
+    }
+
+    public void increaseSaleItemAmount(ISell stockItem) {
+        if (!this.trackSales.containsKey(stockItem)) {
+            addSaleItem(stockItem, 1);
+        } else {
+            int value = getSaleItemAmount(stockItem) + 1;
+            this.trackSales.replace(stockItem, value);
+        }
+    }
+
+    public void decreaseSaleItemAmount(ISell stockItem) {
+        if (this.trackSales.containsKey(stockItem)) {
+            if(getSaleItemAmount(stockItem) > 0) {
+                int value = getSaleItemAmount(stockItem) - 1;
+                this.trackSales.replace(stockItem, value);
+            }
+        }
     }
 }
