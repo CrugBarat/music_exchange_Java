@@ -113,4 +113,11 @@ public class MusicStoreTest {
         assertEquals(0, musicStore.getStockAmount(stockItem2));
     }
 
+    @Test
+    public void canReturnItem() {
+        musicStore.returnItem(stockItem);
+        assertEquals(-549.0, musicStore.getSales(), 0.01);
+        assertEquals(1, musicStore.getStockAmount(stockItem));
+    }
+
 }

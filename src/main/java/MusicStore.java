@@ -81,4 +81,9 @@ public class MusicStore {
             this.sales += item.getRetail();
         }
     }
+
+    public void returnItem(ISell item) {
+       this.sales -= item.getRetail();
+       increaseStock(item);
+    }
 }
