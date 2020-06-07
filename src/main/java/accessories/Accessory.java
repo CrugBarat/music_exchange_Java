@@ -1,6 +1,8 @@
 package accessories;
 
-public abstract class Accessory {
+import behaviours.ISell;
+
+public abstract class Accessory implements ISell {
 
     private String brand;
     private String model;
@@ -44,5 +46,9 @@ public abstract class Accessory {
 
     public void setRetail(double retail) {
         this.retail = retail;
+    }
+
+    public double calculateMarkup() {
+        return this.retail - this.cost;
     }
 }

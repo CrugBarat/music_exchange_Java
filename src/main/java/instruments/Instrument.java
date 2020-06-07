@@ -1,8 +1,8 @@
 package instruments;
-
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument implements IPlay, ISell {
 
     private String brand;
     private String model;
@@ -56,6 +56,10 @@ public abstract class Instrument implements IPlay {
 
     public void setRetail(double retail) {
         this.retail = retail;
+    }
+
+    public double calculateMarkup() {
+        return this.retail - this.cost;
     }
 
 }
