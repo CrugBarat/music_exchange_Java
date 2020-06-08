@@ -130,4 +130,16 @@ public class MusicStore {
             }
         }
     }
+
+    public double getNetProfit() {
+        double netProfit = 0.0;
+        for (Map.Entry<ISell, Integer> entry : this.trackSales.entrySet()) {
+            ISell key = entry.getKey();
+            int value = entry.getValue();
+            double saleItemProfit = key.calculateMarkup() * value;
+            netProfit += saleItemProfit;
+        }
+        return netProfit;
+    }
+
 }

@@ -118,9 +118,10 @@ public class MusicStoreTest {
 
     @Test
     public void canReturnItem() {
+        musicStore.increaseStock(stockItem);
         musicStore.sellItem(stockItem);
         musicStore.returnItem(stockItem);
-        assertEquals(-549.0, musicStore.getSales(), 0.01);
+        assertEquals(0, musicStore.getSales(), 0.01);
         assertEquals(1, musicStore.getStockAmount(stockItem));
         assertEquals(0, musicStore.getSaleItemAmount(stockItem));
     }
@@ -191,6 +192,32 @@ public class MusicStoreTest {
     public void canIncreaseSaleAmountIfInitiallyNoSales() {
         musicStore.increaseSaleItemAmount(stockItem);
         assertEquals(1, musicStore.getSaleItemAmount(stockItem));
+    }
+
+    @Test
+    public void canGetNetProfit() {
+        musicStore.increaseStock(stockItem);
+        musicStore.sellItem(stockItem);
+        assertEquals(174.0, musicStore.getNetProfit(), 0.01);
+    }
+
+    @Test
+    public void canGetNetProfitWithMulipleSales() {
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem2);
+        musicStore.sellItem(stockItem);
+        musicStore.sellItem(stockItem2);
+        assertEquals(241.93, musicStore.getNetProfit(), 0.01);
+    }
+
+    @Test
+    public void canGetNetProfitWithReturnedItem() {
+        musicStore.increaseStock(stockItem);
+        musicStore.increaseStock(stockItem2);
+        musicStore.sellItem(stockItem);
+        musicStore.sellItem(stockItem2);
+        musicStore.returnItem(stockItem2);
+        assertEquals(174.0, musicStore.getNetProfit(), 0.01);
     }
 
 }
