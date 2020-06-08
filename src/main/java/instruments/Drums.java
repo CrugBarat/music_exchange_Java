@@ -1,5 +1,4 @@
 package instruments;
-
 import enums.Category;
 
 public class Drums extends Instrument {
@@ -62,4 +61,5 @@ public class Drums extends Instrument {
     public String play() {
         return "rat-a-tat-tat";
     }
+
 }

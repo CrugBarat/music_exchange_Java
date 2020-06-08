@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 
 public class Headphones extends Accessory{
@@ -28,4 +27,5 @@ public class Headphones extends Accessory{
     public void setJackSize(double jackSize) {
         this.jackSize = jackSize;
     }
+
 }

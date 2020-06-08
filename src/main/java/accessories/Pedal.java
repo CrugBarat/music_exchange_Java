@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 import instruments.Instrument;
 
@@ -29,4 +28,5 @@ public class Pedal extends Accessory{
     public void setCableLength(double cableLength) {
         this.cableLength = cableLength;
     }
+
 }

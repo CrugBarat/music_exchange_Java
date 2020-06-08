@@ -77,4 +77,5 @@ public abstract class Instrument implements IPlay, ISell, IClearance {
     public void applyDiscount(double discount) {
         this.retail -= this.retail * discount;
     }
+
 }

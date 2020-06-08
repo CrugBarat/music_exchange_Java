@@ -1,5 +1,4 @@
 package instruments;
-
 import behaviours.IPlay;
 import enums.Category;
 
@@ -43,4 +42,5 @@ public class Trumpet extends Instrument implements IPlay {
     public String play() {
         return "Ta-tada-ta-ta";
     }
+
 }

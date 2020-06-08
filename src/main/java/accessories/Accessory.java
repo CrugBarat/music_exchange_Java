@@ -1,5 +1,4 @@
 package accessories;
-
 import behaviours.IClearance;
 import behaviours.ISell;
 import enums.Category;
@@ -67,4 +66,5 @@ public abstract class Accessory implements ISell, IClearance {
     public void applyDiscount(double discount) {
         this.retail -= this.retail * discount;
     }
+
 }

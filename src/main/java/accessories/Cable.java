@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 import instruments.Instrument;
 
@@ -29,4 +28,5 @@ public class Cable extends Accessory {
     public void setLength(double length) {
         this.length = length;
     }
+
 }

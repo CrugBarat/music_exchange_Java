@@ -1,5 +1,4 @@
 package instruments;
-
 import behaviours.IPlay;
 import enums.Category;
 
@@ -33,4 +32,5 @@ public class Flute extends Instrument implements IPlay {
     public String play() {
         return "Tu-re-lu-re-lu";
     }
+
 }

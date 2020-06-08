@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 import instruments.Instrument;
 
@@ -29,4 +28,5 @@ public class Stand extends Accessory {
     public void setDimensions(String dimensions) {
         this.dimensions = dimensions;
     }
+
 }

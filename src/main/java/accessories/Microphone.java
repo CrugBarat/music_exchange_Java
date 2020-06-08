@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 
 public class Microphone extends Accessory {
@@ -28,4 +27,5 @@ public class Microphone extends Accessory {
     public void setConnectiontYPE(String connectionType) {
         this.connectionType = connectionType;
     }
+
 }

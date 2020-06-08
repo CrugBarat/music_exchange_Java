@@ -1,5 +1,4 @@
 package instruments;
-
 import behaviours.IPlay;
 import enums.Category;
 
@@ -33,4 +32,5 @@ public class Violin extends Instrument implements IPlay {
     public String play() {
         return "Pling pling-a-pling";
     }
+
 }

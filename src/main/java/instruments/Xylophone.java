@@ -1,5 +1,4 @@
 package instruments;
-
 import behaviours.IPlay;
 import enums.Category;
 
@@ -33,4 +32,5 @@ public class Xylophone extends Instrument implements IPlay {
     public String play() {
         return "ding ding ding";
     }
+
 }

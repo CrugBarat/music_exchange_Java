@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 
 public class Metronome extends Accessory{
@@ -38,4 +37,5 @@ public class Metronome extends Accessory{
     public void setPowerSupply(String powerSupply) {
         this.powerSupply = powerSupply;
     }
+
 }

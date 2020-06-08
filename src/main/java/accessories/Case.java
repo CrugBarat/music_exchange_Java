@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 import instruments.Instrument;
 
@@ -19,4 +18,5 @@ public class Case extends Accessory{
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
     }
+
 }

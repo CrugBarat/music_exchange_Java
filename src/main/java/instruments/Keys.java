@@ -1,5 +1,4 @@
 package instruments;
-
 import enums.Category;
 
 public class Keys extends Instrument {
@@ -42,4 +41,5 @@ public class Keys extends Instrument {
     public String play() {
         return "ding ding";
     }
+
 }

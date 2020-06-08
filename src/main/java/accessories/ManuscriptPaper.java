@@ -1,5 +1,4 @@
 package accessories;
-
 import enums.Category;
 
 public class ManuscriptPaper extends Accessory {
@@ -18,4 +17,5 @@ public class ManuscriptPaper extends Accessory {
     public void setNumberOfSheets(int numberOfSheets) {
         this.numberOfSheets = numberOfSheets;
     }
+
 }
