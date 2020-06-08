@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Flute extends Instrument {
+public class Flute extends Instrument implements IPlay {
 
     private String bodyMaterial;
     private String keyOf;

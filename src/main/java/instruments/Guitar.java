@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements IPlay {
 
     private String frets;
     private int scale;

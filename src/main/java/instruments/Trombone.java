@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Trombone extends Instrument {
+public class Trombone extends Instrument implements IPlay {
 
     private String bodyDesign;
     private double bellDiameter;

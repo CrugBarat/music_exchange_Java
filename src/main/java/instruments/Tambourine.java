@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Tambourine extends Instrument {
+public class Tambourine extends Instrument implements IPlay {
 
     private String shape;
     private String frame;

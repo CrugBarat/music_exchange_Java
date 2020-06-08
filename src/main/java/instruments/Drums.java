@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Drums extends Instrument {
+public class Drums extends Instrument implements IPlay {
 
     private String kickDrumSpec;
     private String snareDrumSpec;

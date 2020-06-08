@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Keys extends Instrument {
+public class Keys extends Instrument implements IPlay {
 
     private int numberOfKeys;
     private double length;

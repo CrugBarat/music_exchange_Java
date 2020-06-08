@@ -1,7 +1,8 @@
 package instruments;
+import behaviours.IPlay;
 import enums.Category;
 
-public class Violin extends Instrument {
+public class Violin extends Instrument implements IPlay {
 
     private String size;
     private String bow;
