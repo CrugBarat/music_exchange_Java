@@ -24,4 +24,5 @@ public class HeadphoneTest {
         headphones.applyDiscount(0.1);
         assertEquals(359.1, headphones.getRetail(), 0.01);
     }
+
 }

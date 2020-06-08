@@ -29,4 +29,5 @@ public class ViolinTest {
         violin.applyDiscount(0.1);
         assertEquals(3149.1, violin.getRetail(), 0.01);
     }
+
 }

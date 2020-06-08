@@ -29,4 +29,5 @@ public class XylophoneTest {
         xylophone.applyDiscount(0.1);
         assertEquals(1573.32, xylophone.getRetail(), 0.01);
     }
+
 }
