@@ -4,7 +4,7 @@ import behaviours.IPlay;
 import behaviours.ISell;
 import enums.Category;
 
-public abstract class Instrument implements IPlay, ISell, IClearance {
+public abstract class Instrument implements ISell, IClearance {
 
     private String brand;
     private String model;
