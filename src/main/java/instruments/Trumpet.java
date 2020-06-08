@@ -1,8 +1,7 @@
 package instruments;
-import behaviours.IPlay;
 import enums.Category;
 
-public class Trumpet extends Instrument implements IPlay {
+public class Trumpet extends Instrument {
 
     private double bellDiameter;
     private double boreDiameter;

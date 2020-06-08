@@ -1,8 +1,7 @@
 package instruments;
-import behaviours.IPlay;
 import enums.Category;
 
-public class Clarinet extends Instrument implements IPlay {
+public class Clarinet extends Instrument {
 
     private double bore;
     private String body;

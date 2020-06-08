@@ -1,8 +1,7 @@
 package instruments;
-import behaviours.IPlay;
 import enums.Category;
 
-public class Xylophone extends Instrument implements IPlay {
+public class Xylophone extends Instrument {
 
     private String material;
     private String octaveRanges;
